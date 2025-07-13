@@ -39,6 +39,7 @@ INSTALLED_APPS = [
 ]
 
 MIDDLEWARE = [
+    'corsheaders.middleware.CorsMiddleware',  # Make sure this is at the top
     'django.middleware.security.SecurityMiddleware',
     'whitenoise.middleware.WhiteNoiseMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
@@ -47,6 +48,31 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+]
+
+# CORS Settings
+CORS_ALLOW_ALL_ORIGINS = True
+CORS_ALLOW_CREDENTIALS = True
+
+CORS_ALLOW_METHODS = [
+    'DELETE',
+    'GET',
+    'OPTIONS',
+    'PATCH',
+    'POST',
+    'PUT',
+]
+
+CORS_ALLOW_HEADERS = [
+    'accept',
+    'accept-encoding',
+    'authorization',
+    'content-type',
+    'dnt',
+    'origin',
+    'user-agent',
+    'x-csrftoken',
+    'x-requested-with',
 ]
 
 ROOT_URLCONF = 'main.urls'
@@ -148,18 +174,6 @@ EMAIL_HOST_PASSWORD = os.getenv('EMAIL_HOST_PASSWORD')  # Your email password or
 DEFAULT_FROM_EMAIL = 'easi.ac.ug@gmail.com'
 CONTACT_EMAIL = 'easi.ac.ug@gmail.com'  
 
-
-CORS_ALLOWED_ORIGINS = [
-    "http://localhost:3000",  # Development
-    "http://localhost:3001",  # Development
-    "http://localhost:3002",  # Development
-    "https://www.easi.ac.ug",  # Production
-    "https://easi.ac.ug",  # Production
-    'https://backend.easi.ac.ug',
-    'https://easi-backend-production.up.railway.app'
-]
-
-# settings.py
 
 CSRF_TRUSTED_ORIGINS = [
     "http://localhost:3000",  
