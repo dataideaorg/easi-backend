@@ -158,3 +158,14 @@ CORS_ALLOWED_ORIGINS = [
     'https://backend.easi.ac.ug',
     'https://easi-backend-production.up.railway.app'
 ]
+
+# settings.py
+
+CSRF_TRUSTED_ORIGINS = [
+    "http://localhost:3000",  
+    "http://localhost:3001",
+    "http://localhost:8000",
+    "http://localhost:8001",
+    "https://easi.ac.ug",
+    "https://backend.easi.ac.ug",
+]
