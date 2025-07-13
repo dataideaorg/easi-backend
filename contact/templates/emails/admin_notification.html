@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            color: #333333;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        .header {
+            background-color: #dd8604;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+        .content {
+            padding: 20px;
+            background-color: #ffffff;
+        }
+        .info-box {
+            background-color: #f5f5f5;
+            padding: 15px;
+            margin: 20px 0;
+            border-left: 4px solid #dd8604;
+        }
+        .message-box {
+            background-color: #f5f5f5;
+            padding: 15px;
+            margin: 20px 0;
+            border-left: 4px solid #2196f3;
+        }
+        .footer {
+            text-align: center;
+            padding: 20px;
+            font-size: 12px;
+            color: #666666;
+            border-top: 1px solid #eeeeee;
+        }
+        .button {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #dd8604;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            margin: 20px 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>New Contact Form Submission</h1>
+    </div>
+    
+    <div class="content">
+        <div class="info-box">
+            <h2>Contact Information</h2>
+            <p><strong>Name:</strong> {{ name }}</p>
+            <p><strong>Email:</strong> {{ email }}</p>
+            <p><strong>Phone:</strong> {{ phone }}</p>
+            <p><strong>Organization:</strong> {{ organization }}</p>
+            <p><strong>Inquiry Type:</strong> {{ inquiry_type }}</p>
+        </div>
+        
+        <div class="message-box">
+            <h2>Message Details</h2>
+            <p><strong>Subject:</strong> {{ subject }}</p>
+            <p><strong>Message:</strong><br>{{ message }}</p>
+        </div>
+        
+        <p>Please review and respond to this inquiry as soon as possible.</p>
+        
+        <a href="https://easi.ac.ug/admin" class="button">Go to Admin Panel</a>
+    </div>
+    
+    <div class="footer">
+        <p>This is an automated message from the EASI Contact Form System</p>
+    </div>
+</body>
+</html> 
