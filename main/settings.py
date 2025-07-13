@@ -168,4 +168,5 @@ CSRF_TRUSTED_ORIGINS = [
     "http://localhost:8001",
     "https://easi.ac.ug",
     "https://backend.easi.ac.ug",
+    'easi-backend-production.up.railway.app',
 ]
