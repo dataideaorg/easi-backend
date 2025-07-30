@@ -34,7 +34,7 @@ def contact_form(request):
                 f"New Contact Form Submission: {contact.subject}",
                 admin_text,
                 settings.DEFAULT_FROM_EMAIL,
-                [settings.CONTACT_EMAIL, 'jumashafara0@gmail.com']
+                [settings.CONTACT_EMAIL, 'info@easi.ac.ug', 'jumashafara0@gmail.com']
             )
             admin_email.attach_alternative(admin_html, "text/html")
             admin_email.send()
